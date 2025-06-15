@@ -32,7 +32,7 @@ This project includes:
 - Several AI players:
   - 🎲 `RandomPlayer` — chooses moves randomly
   - 🎯 `QuasiRandomPlayer` — mixes randomness with logic
-  - 🤖 `AlphaBetaPro` — alpha-beta pruning and smart evaluation
+  - 🤖 `AlphaBetaPro` — alpha-beta pruning and smart evaluation (our algorithm)
 - A test suite for head-to-head comparisons
 
 ---
