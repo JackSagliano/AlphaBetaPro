@@ -1,4 +1,4 @@
-# ♟️ MNKGame – AlphaBetaPro
+# ⭕❌ MNKGame – AlphaBetaPro
 
 **MNKGame** is a Java implementation of the generalized (M, N, K)-game — an extended version of Tic-Tac-Toe, where two players compete to align K symbols on an MxN grid.
 
