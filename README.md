@@ -49,32 +49,37 @@ In the `mnkgame/` directory, run:
 
 ### 2. 🕹️ Run `MNKGame` (Application Mode)
 
-1. **Human vs Computer**  
-   Launch a game between a human and a bot on a 3×3 board:
+1. **Human vs AlphaBetaPro**  
+   Launch a match between a human and your custom bot on a 3×3 board:
 
-        java -cp ".." mnkgame.MNKGame 3 3 3 mnkgame.RandomPlayer
+        java -cp ".." mnkgame.MNKGame 3 3 3 mnkgame.AlphaBetaPro
 
-2. **Computer vs Computer**  
-   Launch a match between two bots on a 5×5 board (4 in a row to win):
+2. **AlphaBetaPro vs RandomPlayer**  
+   Launch a game between your bot and a simple random opponent:
 
-        java -cp ".." mnkgame.MNKGame 5 5 4 mnkgame.RandomPlayer mnkgame.QuasiRandomPlayer
+        java -cp ".." mnkgame.MNKGame 5 5 4 mnkgame.AlphaBetaPro mnkgame.RandomPlayer
+
+3. **AlphaBetaPro vs QuasiRandomPlayer**  
+   Launch a game between your bot and a smarter bot:
+
+        java -cp ".." mnkgame.MNKGame 5 5 4 mnkgame.AlphaBetaPro mnkgame.QuasiRandomPlayer
 
 ---
 
 ### 3. 🧪 Run `MNKPlayerTester` (Tournament Mode)
 
 1. **Score-only output**  
-   Run a tournament with results summary:
+   Run a tournament and display final scores:
 
-        java -cp ".." mnkgame.MNKPlayerTester 5 5 4 mnkgame.RandomPlayer mnkgame.QuasiRandomPlayer
+        java -cp ".." mnkgame.MNKPlayerTester 5 5 4 mnkgame.AlphaBetaPro mnkgame.QuasiRandomPlayer
 
 2. **Verbose output**  
-   Run with full move-by-move details:
+   Show full move logs during evaluation:
 
-        java -cp ".." mnkgame.MNKPlayerTester 5 5 4 mnkgame.RandomPlayer mnkgame.QuasiRandomPlayer -v
+        java -cp ".." mnkgame.MNKPlayerTester 5 5 4 mnkgame.AlphaBetaPro mnkgame.QuasiRandomPlayer -v
 
 3. **Verbose + timeout + repetitions**  
-   Run 10 matches with 1-second timeout per move:
+   Run 10 games with 1-second timeout per move:
 
-        java -cp ".." mnkgame.MNKPlayerTester 5 5 4 mnkgame.RandomPlayer mnkgame.QuasiRandomPlayer -v -t 1 -r 10
+        java -cp ".." mnkgame.MNKPlayerTester 5 5 4 mnkgame.AlphaBetaPro mnkgame.QuasiRandomPlayer -v -t 1 -r 10
 
