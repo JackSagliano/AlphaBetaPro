@@ -50,18 +50,15 @@ In the `mnkgame/` directory, run:
 ### 2. 🕹️ Run `MNKGame` (Application Mode)
 
 1. **Human vs AlphaBetaPro**  
-   Launch a match between a human and your custom bot on a 3×3 board:
 
         java -cp ".." mnkgame.MNKGame 3 3 3 mnkgame.AlphaBetaPro
 
 2. **AlphaBetaPro vs RandomPlayer**  
-   Launch a game between your bot and a simple random opponent:
 
         java -cp ".." mnkgame.MNKGame 5 5 4 mnkgame.AlphaBetaPro mnkgame.RandomPlayer
 
-3. **AlphaBetaPro vs QuasiRandomPlayer**  
-   Launch a game between your bot and a smarter bot:
-
+3. **AlphaBetaPro vs QuasiRandomPlayer**
+   
         java -cp ".." mnkgame.MNKGame 5 5 4 mnkgame.AlphaBetaPro mnkgame.QuasiRandomPlayer
 
 ---
