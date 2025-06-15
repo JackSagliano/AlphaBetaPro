@@ -49,34 +49,45 @@ In the `mnkgame/` directory, run:
 
 ### 2. 🕹️ Run `MNKGame` (Application Mode)
 
-1. **Human vs AlphaBetaPro**  
+The command syntax is:
+
+    java -cp ".." mnkgame.MNKGame M N K [Player1] [Player2]
+
+Where:
+
+- `M` → Number of **rows** on the board
+- `N` → Number of **columns**
+- `K` → Number of **symbols in a row** needed to win
+
+You can omit the second player to play as human vs computer.
+
+#### Examples
+
+1. **Human vs AlphaBetaPro** (classic 3×3 Tic-Tac-Toe):
 
         java -cp ".." mnkgame.MNKGame 3 3 3 mnkgame.AlphaBetaPro
 
-2. **AlphaBetaPro vs RandomPlayer**  
+2. **AlphaBetaPro vs RandomPlayer** (5×5 grid, 4 in a row to win):
 
         java -cp ".." mnkgame.MNKGame 5 5 4 mnkgame.AlphaBetaPro mnkgame.RandomPlayer
 
-3. **AlphaBetaPro vs QuasiRandomPlayer**
-   
+3. **AlphaBetaPro vs QuasiRandomPlayer**:
+
         java -cp ".." mnkgame.MNKGame 5 5 4 mnkgame.AlphaBetaPro mnkgame.QuasiRandomPlayer
 
 ---
 
 ### 3. 🧪 Run `MNKPlayerTester` (Tournament Mode)
 
-1. **Score-only output**  
-   Run a tournament and display final scores:
+1. **Score-only output**:
 
         java -cp ".." mnkgame.MNKPlayerTester 5 5 4 mnkgame.AlphaBetaPro mnkgame.QuasiRandomPlayer
 
-2. **Verbose output**  
-   Show full move logs during evaluation:
+2. **Verbose output**:
 
         java -cp ".." mnkgame.MNKPlayerTester 5 5 4 mnkgame.AlphaBetaPro mnkgame.QuasiRandomPlayer -v
 
-3. **Verbose + timeout + repetitions**  
-   Run 10 games with 1-second timeout per move:
+3. **Verbose + timeout + repetitions**:
 
         java -cp ".." mnkgame.MNKPlayerTester 5 5 4 mnkgame.AlphaBetaPro mnkgame.QuasiRandomPlayer -v -t 1 -r 10
 
