@@ -38,3 +38,43 @@ This project includes:
 ---
 
 ## 🚀 How to Run
+
+### 1. 🛠️ Compile the Code
+
+In the `mnkgame/` directory, run:
+
+    javac -cp ".." *.java
+
+---
+
+### 2. 🕹️ Run `MNKGame` (Application Mode)
+
+1. **Human vs Computer**  
+   Launch a game between a human and a bot on a 3×3 board:
+
+        java -cp ".." mnkgame.MNKGame 3 3 3 mnkgame.RandomPlayer
+
+2. **Computer vs Computer**  
+   Launch a match between two bots on a 5×5 board (4 in a row to win):
+
+        java -cp ".." mnkgame.MNKGame 5 5 4 mnkgame.RandomPlayer mnkgame.QuasiRandomPlayer
+
+---
+
+### 3. 🧪 Run `MNKPlayerTester` (Tournament Mode)
+
+1. **Score-only output**  
+   Run a tournament with results summary:
+
+        java -cp ".." mnkgame.MNKPlayerTester 5 5 4 mnkgame.RandomPlayer mnkgame.QuasiRandomPlayer
+
+2. **Verbose output**  
+   Run with full move-by-move details:
+
+        java -cp ".." mnkgame.MNKPlayerTester 5 5 4 mnkgame.RandomPlayer mnkgame.QuasiRandomPlayer -v
+
+3. **Verbose + timeout + repetitions**  
+   Run 10 matches with 1-second timeout per move:
+
+        java -cp ".." mnkgame.MNKPlayerTester 5 5 4 mnkgame.RandomPlayer mnkgame.QuasiRandomPlayer -v -t 1 -r 10
+
